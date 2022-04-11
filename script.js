@@ -18,9 +18,6 @@ buttonSearch.addEventListener("click", function(){
  loadInfo(userhttp,getData,urlPostInfo); 
 })
 
-
-
-//запрос на получение данных
 function loadInfo(xmlHttpRequest,funct,href) {
 	
 	xmlHttpRequest.onreadystatechange = function() {
@@ -33,8 +30,6 @@ function loadInfo(xmlHttpRequest,funct,href) {
 }
 
 
-
-//Вывод постов пользователя
 function getData(data){
 	 
 	var ulContainer = document.createElement("ul");
@@ -75,9 +70,6 @@ function getData(data){
 	
 }
 
-	
-	
- //Установка объекта для соединения с сервером в зависимости от браузера
 function getXmlHttp(){
   var xmlhttp;
   try {
@@ -95,11 +87,10 @@ function getXmlHttp(){
   return xmlhttp;
 }
 
-//Меняем первую букву на заглавную
 function bigFirstLetter(str){
 	return str[0].toUpperCase() + str.slice(1);
 }
-//Выводи инфу о пользователе
+
 function getUserInfo(data){
 	
 	var allData = JSON.parse(data.responseText);
